@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: gainsboro;
+}
+
+main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 25px 0 20px;
+  text-align: center;
+}
+
+.date-input {
+  font-size: 14px;
+}
+
+.visualizer {
+  height: 630px;
+  width: 630px;
+  margin: 40px auto;
+  background-color: rebeccapurple;
+  background-image: url("/images/sky.png");
+  background-size: contain;
+}
+
+.asteroid {
+  width: 30px;
+  position: relative;
+  animation: move-keyframes 5s;
+  animation-timing-function: linear;
+}
+@keyframes move-keyframes {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 600px;
+    left: 600px;
+  }
+}
+
+#earth {
+  width: 30px;
+  position: relative;
+  top: 285px;
+  left: 285px;
+}
