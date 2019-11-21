@@ -1,6 +1,6 @@
 import axios from "axios";
 import { API_KEY } from "./secret.config.js";
-const url = "http://www.neowsapp.com/rest/v1/feed";
+const url = "https://www.neowsapp.com/rest/v1/feed";
 
 const getAsteroidData = async function(date) {
   let result;
