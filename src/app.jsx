@@ -11,7 +11,6 @@ const App = () => {
   const [startTime, setStart] = useState(0);
 
   useEffect(() => {
-    console.log("selected ", formatDate(date));
     getAsteroidData(formatDate(date)).then(data => {
       const transformed = transformAsteroidData(data);
       setAsteroidData(transformed);

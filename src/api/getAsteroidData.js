@@ -4,7 +4,6 @@ const url = "https://www.neowsapp.com/rest/v1/feed";
 
 const getAsteroidData = async function(date) {
   let result;
-  console.log(date);
   await axios
     .get(url, {
       params: {
@@ -16,6 +15,7 @@ const getAsteroidData = async function(date) {
     })
     .then(({ data }) => {
       result = Object.values(data.near_earth_objects)[0];
+      console.log(result);
     });
 
   return result;
