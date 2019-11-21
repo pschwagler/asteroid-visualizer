@@ -1,7 +1,7 @@
 const calculateEntryExit = function(distance) {
   // variables named based on y = mx + b
   const pixelsPerHundred = 6;
-  const earthRadiusPixels = 15;
+  const earthRadiusPixels = 20;
   const asteroidRadiusPixels = 11;
   distance += (earthRadiusPixels + asteroidRadiusPixels) / pixelsPerHundred;
   var m = Math.random() / Math.random();
