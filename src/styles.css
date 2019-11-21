@@ -44,7 +44,6 @@ main {
   height: 630px;
   width: 630px;
   margin: 40px auto;
-  background-color: rebeccapurple;
   background-image: url("/images/sky.png");
   background-size: contain;
   position: relative;

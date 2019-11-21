@@ -4,12 +4,13 @@ const url = "https://www.neowsapp.com/rest/v1/feed";
 
 const getAsteroidData = async function(date) {
   let result;
+  console.log(date);
   await axios
     .get(url, {
       params: {
         api_key: API_KEY,
-        start_date: "2019-11-17",
-        end_date: "2019-11-17",
+        start_date: date,
+        end_date: date,
         detailed: true
       }
     })

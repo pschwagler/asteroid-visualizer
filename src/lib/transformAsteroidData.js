@@ -1,7 +1,9 @@
 const calculateEntryExit = function(distance) {
-  console.log("distance", distance);
   // variables named based on y = mx + b
-  distance += 15 / 6;
+  const pixelsPerHundred = 6;
+  const earthRadiusPixels = 15;
+  const asteroidRadiusPixels = 10;
+  distance += (earthRadiusPixels + asteroidRadiusPixels) / pixelsPerHundred;
   var m = Math.random() / Math.random();
   if (Math.random() < 0.5) {
     m = -m;
@@ -31,16 +33,26 @@ const calculateEntryExit = function(distance) {
     exit = [100, y100];
   }
 
-  return [entry, exit].map(tuple => tuple.map(num => Math.round(num * 6)));
+  if (Math.random() < 0.5) {
+    const tmp = entry;
+    entry = exit;
+    exit = tmp;
+  }
+
+  return [entry, exit].map(tuple =>
+    tuple.map(num => +(num * pixelsPerHundred).toFixed(1))
+  );
 };
 
 const transformAsteroidData = data => {
   const scale = 2000000;
   console.log(
-    data.map(asteroid =>
-      Math.floor(
-        Number(asteroid.close_approach_data[0].miss_distance.kilometers) / scale
-      )
+    data.map(
+      asteroid =>
+        +(
+          Number(asteroid.close_approach_data[0].miss_distance.kilometers) /
+          scale
+        ).toFixed(1)
     )
   );
   const transformed = data.map(asteroid => {
@@ -50,9 +62,8 @@ const transformAsteroidData = data => {
       missDist / scale
     );
 
-    return { startTop, startLeft, endTop, endLeft, duration: 5 };
+    return { startTop, startLeft, endTop, endLeft, duration: 4 };
   });
-  console.log(transformed);
   return transformed;
 };
 
