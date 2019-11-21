@@ -11,13 +11,26 @@ main {
 }
 
 .title {
-  margin: 25px 0 20px;
+  margin: 25px 0 10px;
   text-align: center;
+}
+
+.date-input {
+  margin: 0px 5px;
 }
 
 .control-panel {
   display: flex;
   justify-content: space-between;
+}
+
+.run-visualizer {
+  margin-left: 15px;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .send-money {
@@ -43,7 +56,7 @@ main {
 .visualizer {
   height: 630px;
   width: 630px;
-  margin: 40px auto;
+  margin: 10px auto;
   background-image: url("/images/sky.png");
   background-size: contain;
   position: relative;

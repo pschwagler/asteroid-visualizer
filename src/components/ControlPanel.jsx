@@ -15,7 +15,7 @@ const ControlPanel = ({ date, setDate, handleClick }) => {
               setDate(newDate);
             }}
           />
-          <button className="run-visualier" onClick={handleClick}>
+          <button className="run-visualizer" onClick={handleClick}>
             Go
           </button>{" "}
         </div>
