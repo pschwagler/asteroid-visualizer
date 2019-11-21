@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "start": "npm run build-prod && node server/index.js",
+    "start": "node server/index.js",
     "start-dev": "concurrently \"npm run build-dev\" \"nodemon server/index.js\"",
     "build-dev": "webpack -d --watch --mode development",
     "build-prod": "webpack -p --mode production"
