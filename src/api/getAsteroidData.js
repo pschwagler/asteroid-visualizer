@@ -14,7 +14,6 @@ const getAsteroidData = async function(date) {
       }
     })
     .then(({ data }) => {
-      console.log(Object.values(data.near_earth_objects)[0]);
       result = Object.values(data.near_earth_objects)[0];
     });
 

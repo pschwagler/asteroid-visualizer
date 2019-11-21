@@ -15,6 +15,27 @@ main {
   text-align: center;
 }
 
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.send-money {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: rebeccapurple;
+}
+
+.send-money a {
+  color: gainsboro;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.send-money a:visited {
+  text-decoration: none;
+}
+
 .date-input {
   font-size: 14px;
 }
@@ -26,28 +47,33 @@ main {
   background-color: rebeccapurple;
   background-image: url("/images/sky.png");
   background-size: contain;
+  position: relative;
 }
 
 .asteroid {
-  width: 30px;
+  width: 20px;
   position: relative;
-  animation: move-keyframes 5s;
-  animation-timing-function: linear;
+  --duration: 5s;
+  --start-top: 0;
+  --start-left: 0;
+  --end-top: 600px;
+  --end-left: 600px;
+  animation: move-keyframes var(--duration) linear;
 }
 @keyframes move-keyframes {
-  from {
-    top: 0;
-    left: 0;
+  0% {
+    top: var(--start-top);
+    left: var(--start-left);
   }
-  to {
-    top: 600px;
-    left: 600px;
+  100% {
+    top: var(--end-top);
+    left: var(--end-left);
   }
 }
 
 #earth {
   width: 30px;
-  position: relative;
-  top: 285px;
-  left: 285px;
+  position: absolute;
+  top: 290px;
+  left: 290px;
 }
