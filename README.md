@@ -4,6 +4,9 @@ This was a one-day creation to create a vizualizer for the asteroids that whizz 
 
 https://asteroid-visualizer.herokuapp.com/
 
-More to come...
+For scale: 3px === 1,000,000km
+(Earth is ~1,046 times actual size, asteroids are anywhere from 1 - 300 million times actual size)
+
+More to come (scaling size, velocity, displaying info, etc.)
 
 
